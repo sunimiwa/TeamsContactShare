@@ -178,7 +178,7 @@ namespace StickersTemplate
                 users[1].Location = "Bellvue2";
                 users[1].Department = "Teams2";
                 users[1].ChatDeepLink = new Uri("https://teams.microsoft.com/l/chat/0/0?users=dechowdh@microsoft.com");
-                users[0].ImageUrl = new Uri("https://i1.sndcdn.com/artworks-000102597672-43n36k-t500x500.jpg");
+                users[1].ImageUrl = new Uri("https://i1.sndcdn.com/artworks-000102597672-43n36k-t500x500.jpg");
 
                 var result = new ComposeExtensionResponse
                 {
