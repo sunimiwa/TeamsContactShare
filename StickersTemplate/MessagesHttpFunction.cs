@@ -164,13 +164,27 @@ namespace StickersTemplate
                 await stickerSetIndexer.IndexStickerSetAsync(stickerSet);
                 var stickers = await stickerSetIndexer.FindStickersByQuery(query, skip, count);
 
+                User[] users = new User[2];
+
+                users[0].Name = "Debo";
+                users[0].JobTitle = "SDE";
+                users[0].Location = "Bellvue";
+                users[0].Department = "Teams";
+                users[0].ChatDeepLink = new Uri("https://teams.microsoft.com/l/chat/0/0?users=dechowdh@microsoft.com");
+
+                users[1].Name = "Debo2";
+                users[1].JobTitle = "SDE2";
+                users[1].Location = "Bellvue2";
+                users[1].Department = "Teams2";
+                users[1].ChatDeepLink = new Uri("https://teams.microsoft.com/l/chat/0/0?users=dechowdh@microsoft.com");
+
                 var result = new ComposeExtensionResponse
                 {
                     ComposeExtensionResult = new ComposeExtensionResult
                     {
                         Type = "result",
                         AttachmentLayout = "grid",
-                        Attachments = stickers.Select(sticker => new StickerComposeExtensionCard(sticker).ToAttachment()).ToArray()
+                        Attachments = users.Select(user => new StickerComposeExtensionCard(user).ToAttachment()).ToArray()
                     }
                 };
 
