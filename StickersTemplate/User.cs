@@ -15,5 +15,6 @@ namespace StickersTemplate
         public string Location { get; set; }
         public string Department { get; set; }
         public Uri ChatDeepLink { get; set; }
+        public Uri ImageUrl { get; set; }
     }
 }

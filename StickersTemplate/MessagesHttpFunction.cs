@@ -171,12 +171,14 @@ namespace StickersTemplate
                 users[0].Location = "Bellvue";
                 users[0].Department = "Teams";
                 users[0].ChatDeepLink = new Uri("https://teams.microsoft.com/l/chat/0/0?users=dechowdh@microsoft.com");
+                users[0].ImageUrl = new Uri("https://i1.sndcdn.com/artworks-000102597672-43n36k-t500x500.jpg");
 
                 users[1].Name = "Debo2";
                 users[1].JobTitle = "SDE2";
                 users[1].Location = "Bellvue2";
                 users[1].Department = "Teams2";
                 users[1].ChatDeepLink = new Uri("https://teams.microsoft.com/l/chat/0/0?users=dechowdh@microsoft.com");
+                users[0].ImageUrl = new Uri("https://i1.sndcdn.com/artworks-000102597672-43n36k-t500x500.jpg");
 
                 var result = new ComposeExtensionResponse
                 {
@@ -184,7 +186,7 @@ namespace StickersTemplate
                     {
                         Type = "result",
                         AttachmentLayout = "grid",
-                        Attachments = users.Select(user => new StickerComposeExtensionCard(user).ToAttachment()).ToArray()
+                        Attachments = users.Select(user => new UserComposeExtensionCard(user).ToAttachment()).ToArray()
                     }
                 };
 

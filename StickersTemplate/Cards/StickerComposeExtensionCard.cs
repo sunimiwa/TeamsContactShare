@@ -18,8 +18,6 @@ namespace StickersTemplate.Cards
     {
         private readonly Sticker sticker;
 
-        private readonly User user;
-
         /// <summary>
         /// Initializes a new instance of the <see cref="StickerComposeExtensionCard"/> class.
         /// </summary>
@@ -27,15 +25,6 @@ namespace StickersTemplate.Cards
         public StickerComposeExtensionCard(Sticker sticker)
         {
             this.sticker = sticker ?? throw new ArgumentNullException(nameof(sticker));
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="StickerComposeExtensionCard"/> class.
-        /// </summary>
-        /// <param name="sticker">The <see cref="sticker"/> for this card.</param>
-        public StickerComposeExtensionCard(User sticker)
-        {
-            this.user = sticker ?? throw new ArgumentNullException(nameof(sticker));
         }
 
         /// <summary>
