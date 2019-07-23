@@ -27,11 +27,11 @@
         {
             var contentCard = new HeroCard
             {
-                Title = user.Name,
-                Subtitle = user.JobTitle,
+                Title = this.user.Name,
+                Subtitle = this.user.JobTitle,
 
                 // Description in search response is pre-truncated with elipsis, which is what we want for text. Description in list response is too long to present in a card
-                Text = user.Location,
+                Text = this.user.Location,
                 Images = new List<CardImage>()
                 {
                     new CardImage
@@ -43,7 +43,7 @@
                 Tap = new CardAction
                 {
                     Type = ActionTypes.OpenUrl,
-                    Value = user.ChatDeepLink,
+                    Value = this.user.ChatDeepLink,
                 }
             };
 
